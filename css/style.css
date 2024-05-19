@@ -803,8 +803,8 @@ footer p {
 
     .card{
       width: 84%;
-      height: 50%;
-      margin-left: 17%;
+      height: 550px;
+      
     }
 
 
@@ -835,7 +835,7 @@ footer p {
     .ultimos-livros .card-read-more-bookTree{
       z-index: 2;
       width: 84%;
-      height: 20%;
+
       left: 8%;
       top: 215vh;
       border-radius: 12px;
@@ -1015,3 +1015,73 @@ footer p {
 }
 
 
+@media screen and (max-width: 500px) {
+    .card{
+      margin-left: 8%;
+    }
+
+    .ultimos-livros .card-read-more{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 8%;
+      top: 102%;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more p{
+      color: #fff;
+    }
+
+    .ultimos-livros .card-read-more-bookTwo{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 8%;
+      top: 170vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookTree{
+      z-index: 2;
+      width: 84%;
+
+      left: 8%;
+      top: 245vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookFour{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 320vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+    
+    .ultimos-livros .card-read-more-bookFive{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 393vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookSix{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 464vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+}
