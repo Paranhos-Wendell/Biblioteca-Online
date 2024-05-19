@@ -168,7 +168,8 @@ nav input{
 
 .home{
   position: relative;
-
+  width: auto;
+  height: auto;
 }
 
 .home img{
@@ -183,7 +184,8 @@ nav input{
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   background: linear-gradient(to right, #003366, #336699);
-  height: 110vh;
+  height: auto;
+  width: auto;
 }
 
 
@@ -1011,6 +1013,74 @@ footer p {
     left: 10vw; /* Center the cards */
     top: 50vh; /* Add margin from the top */
     bottom: auto;
+  }
+
+  .card{
+    margin-left:15%;
+  }
+
+  .ultimos-livros .card-read-more{
+    z-index: 2;
+    width: 72%;
+    height: 24.125rem;
+    left: 14%;
+    top: 102%;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
+  }
+
+  .ultimos-livros .card-read-more p{
+    color: #fff;
+  }
+
+  .ultimos-livros .card-read-more-bookTwo{
+    z-index: 2;
+    width: 72%;
+    height: 24.125rem;
+    left: 14%;
+    top: 170vh;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
+  }
+
+  .ultimos-livros .card-read-more-bookTree{
+    z-index: 2;
+    width: 72%;
+
+    left: 14%;
+    top: 242vh;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
+  }
+
+  .ultimos-livros .card-read-more-bookFour{
+    z-index: 2;
+    width: 72%;
+    height: 24.125rem;
+    left: 14%;
+    top: 320vh;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
+  }
+  
+  .ultimos-livros .card-read-more-bookFive{
+    z-index: 2;
+    width: 72%;
+    height: 24.125rem;
+    left: 14%;
+    top: 393vh;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
+  }
+
+  .ultimos-livros .card-read-more-bookSix{
+    z-index: 2;
+    width: 72%;
+    height: 24.125rem;
+    left: 14%;
+    top: 460vh;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.635);
   }
 }
 
