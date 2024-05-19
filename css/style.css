@@ -476,24 +476,24 @@ width: 50%;
 }
 
 .carousel-item--1 .carousel-item__image{
-  background-image: url(/image/91uEuBMbkSL-1535608488.jpg);
+  background-image: url("/image/91uEuBMbkSL-1535608488.jpg");
 }
 
 
 .carousel-item--2 .carousel-item__image{
-  background-image: url(/image/capa-do-livro-o-despertar-568314069.jpg);
+  background-image: url("/image/capa-do-livro-o-despertar-568314069.jpg");
 }
 
 .carousel-item--3 .carousel-item__image{
-  background-image: url(/image/CAPA_Harry_Potter_Pedra_Filosofal-566202811.jpg);
+  background-image: url("/image/CAPA_Harry_Potter_Pedra_Filosofal-566202811.jpg");
 }
 
 .carousel-item--4 .carousel-item__image{
-  background-image: url(/image/Jurassic+Park-capa-1907549120.jpg);
+  background-image: url("/image/Jurassic+Park-capa-1907549120.jpg");
 }
 
 .carousel-item--5 .carousel-item__image{
-  background-image: url(/image/Livro-It-a-Coisa-Stephen-King-3477459-3404260029.jpg);
+  background-image: url("/image/Livro-It-a-Coisa-Stephen-King-3477459-3404260029.jpg");
 }
 
 .carousel-item__btn{
