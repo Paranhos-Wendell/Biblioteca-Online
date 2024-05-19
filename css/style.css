@@ -803,7 +803,7 @@ footer p {
 
     .card{
       width: 84%;
-      height: 28%;
+      height: 50%;
       margin-left: 17%;
     }
 
@@ -827,7 +827,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 8%;
-      top: 153vh;
+      top: 160vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -835,9 +835,9 @@ footer p {
     .ultimos-livros .card-read-more-bookTree{
       z-index: 2;
       width: 84%;
-      height: 24.125rem;
+      height: 20%;
       left: 8%;
-      top: 203vh;
+      top: 215vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -847,7 +847,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 250vh;
+      top: 265vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -857,7 +857,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 315vh;
+      top: 325vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -867,7 +867,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 367vh;
+      top: 385vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
