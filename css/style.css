@@ -1,0 +1,1036 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root {
+  /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+html, body{
+    height: 100vh;
+    scroll-behavior: smooth;
+    background-size: cover;
+    background-position: center;  
+}
+
+nav{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    
+    background: #065F89;
+    box-shadow: 0 6px 4px #000;
+}
+nav .wrapper{
+    position: relative;
+    max-width: 1300px;
+    padding: 0px 30px;
+    height: 70px;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .logo a{
+    color: #f2f2f2;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.wrapper .nav-links{
+    display: inline-flex;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+    background: #C6DFE6;
+    color: #000;
+}
+.nav-links .mobile-item{
+    display: none;
+}
+.nav-links .drop-menu{
+    position: absolute;
+    background: #242526;
+    width: 180px;
+    line-height: 45px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+    transition: all 0.3s ease;
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+.drop-menu li a{
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+}
+.mega-box{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    top: 85px;
+    opacity: 0;
+    visibility: hidden;
+}
+.mega-box .content{
+    background: #218DAA;
+    padding: 25px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 6px 10px #000;
+}
+.mega-box .content .row{
+    width: calc(25% - 30px);
+    line-height: 45px;
+}
+.content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content .row header{
+    color: #f2f2f2;
+    border-bottom: 2px solid #000;
+    width: 90%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+.content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(0, 0, 0, 0.235);
+}
+.row .mega-links li{
+    padding: 0 20px;
+}
+.row .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    color: #000;
+    font-size: 20px;
+    display: block;
+
+}
+.row .mega-links li a:hover{
+    color: #000;
+}
+.wrapper .btn{
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+
+nav input{
+    display: none;
+}
+  
+
+
+.home{
+  position: relative;
+
+}
+
+.home img{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.ultimos-livros{
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  background: linear-gradient(to right, #003366, #336699);
+  height: 110vh;
+}
+
+
+h2 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+
+.card {
+  display: grid;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 28.125rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  margin: 50px auto;
+  z-index: 1;
+  margin-left: 125px;
+}
+
+
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 12% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  border: 2px solid #242568;
+  box-shadow: 0 0 10px #fff;
+  background-color: rgba(0,0,0,0.15);
+  transition: all 0.5s linear;
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: #003366;
+  font-family: var(--font-title);
+  font-size: 1.125rem;
+  color: #fff;
+  box-shadow: 0 0 10px #fff;
+  cursor: pointer;
+  z-index: 99;
+  
+}
+
+.card-read-more, 
+.card-read-more-bookTwo, 
+.card-read-more-bookTree, 
+.card-read-more-bookFour, 
+.card-read-more-bookFive, 
+.card-read-more-bookSix {
+  position: absolute;
+  border: 4px solid #000;
+  background-color: rgba(0,0,0,0.25);
+  width: 16vw; /* Adjusted to vw */
+  height: 28.125rem;
+  overflow: scroll;
+  display: none;
+}
+
+.card-read-more {
+  margin-top: 55px;
+  right: 61.5vw; /* Adjusted to vw */
+  background-color: rgba(0,0,0,0.15);
+}
+
+.card-read-more-bookTwo,
+.card-read-more-bookTree {
+  margin-top: 55px;
+  right: 28vw; /* Adjusted to vw */
+}
+
+.card-read-more-bookFour,
+.card-read-more-bookFive,
+.card-read-more-bookSix {
+  bottom: -105%;
+  right: 28vw; /* Adjusted to vw */
+}
+
+.card-read-more-bookFour {
+  right: 61.5vw; /* Adjusted to vw */
+  background-color: rgba(0,0,0,0.35);
+}
+
+.card-read-more .more p,
+.card-read-more-bookTwo .more p,
+.card-read-more-bookTree .more p,
+.card-read-more-bookFour .more p,
+.card-read-more-bookFive .more p,
+.card-read-more-bookSix .more p {
+  font-size: 1.25rem; /* Use rem for relative sizing */
+  text-align: left;
+  line-height: 1.875rem; /* Use rem for relative sizing */
+  font-weight: 600;
+  font-family: Arial, sans-serif; /* Added fallback font */
+  color: #fff;
+}
+
+.card-read-more-bookFour .more p {
+  font-size: 1.5625rem; /* Adjusted for .card-read-more-bookFour */
+}
+
+
+.card__button:hover{
+  background-color: transparent;
+  border: 1px solid #fff;
+  transition: all .1s linear;
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+
+.livros-populares{
+  height: 100vh;
+  background: #C6DFE6;
+  filter: blur(0.5px);
+  border-bottom: 9px solid #fff;
+}
+
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin:0 auto;
+  max-width: 90%;
+  max-height: 90%;   
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.carousel-item {
+
+visibility:visible;
+  display: flex;
+  width: 100%;
+  height:100%;
+  align-items: center;
+  justify-content: flex-end;
+    -webkit-align-items: center;
+  -webkit-justify-content: flex-end;
+  position: relative;
+  background-color: #fff;
+  flex-shrink: 0;
+ -webkit-flex-shrink: 0;
+  position: absolute;
+  z-index: 0;
+transition: 0.6s all linear;
+  
+
+}
+
+.carousel-item__info {
+height: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+border: 2px solid #000;
+  display: -webkit-flex;
+-webkit-justify-content: center;
+-webkit-flex-direction: column;
+order: 1;
+left: 0;
+margin:auto;
+padding: 0 5px;
+width: 50%;
+
+}
+
+.carousel-item__image {
+  height: 100%;
+  width: 100%;
+  order: 2;
+  align-self: flex-end;
+  flex-basis: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+  transform: translateX(100%);
+  transition: 0.6s all ease-in-out;
+}
+
+.carousel-item__subtitle {
+  font-family: Arial;
+  letter-spacing: 3px;
+  font-size: 34px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #7E7E7E;    
+  font-weight: 700;
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s all ease-in-out;
+}
+
+.carousel-item__title {
+  margin: 15px 0 0 0;
+  font-family: Arial;
+  font-size: 44px;
+  line-height: 45px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #2C2C2C;
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s all ease-in-out;
+}
+
+.carousel-item__description {
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s all ease-in-out;
+  margin-top: 35px;
+  font-family: Arial;
+  font-size: 24px;
+  color: #7e7e7e;
+  line-height: 22px;
+  margin-bottom: 35px;
+}
+
+.carousel-item--1 .carousel-item__image{
+  background-image: url(/image/91uEuBMbkSL-1535608488.jpg);
+}
+
+
+.carousel-item--2 .carousel-item__image{
+  background-image: url(/image/capa-do-livro-o-despertar-568314069.jpg);
+}
+
+.carousel-item--3 .carousel-item__image{
+  background-image: url(/image/CAPA_Harry_Potter_Pedra_Filosofal-566202811.jpg);
+}
+
+.carousel-item--4 .carousel-item__image{
+  background-image: url(/image/Jurassic+Park-capa-1907549120.jpg);
+}
+
+.carousel-item--5 .carousel-item__image{
+  background-image: url(/image/Livro-It-a-Coisa-Stephen-King-3477459-3404260029.jpg);
+}
+
+.carousel-item__btn{
+  width: 35%;
+  color: #2C2C2C;
+  letter-spacing: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+  width: 25%;
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transform: 0.6s all ease-in-out;
+}
+
+.carousel__nav{
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  background: transparent;
+  bottom: 0;
+}
+
+.carousel__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 25px;
+  fill: #0800f7;
+}
+
+.carousel__icon:hover{
+  fill: #C6DFE6;
+}
+
+.carousel__arrow {
+  cursor: pointer;
+  display: inline-block;
+  padding: 11px 15px;
+  position: relative;
+
+}
+
+.carousel__arrow:nth-child(1):after {
+  content:'';
+  right: -3px;
+  position: absolute;
+  width: 1px;
+  background-color: #b0b0b0;
+  height: 14px;
+  top: 50%;
+  margin-top: -7px;
+}
+
+.active{
+ z-index: 1;
+display: flex;
+visibility:visible;
+}
+
+.active .carousel-item__subtitle, .active .carousel-item__title, .active .carousel-item__description,.active .carousel-item__btn{
+  transform: translateY(0);
+  opacity: 1;
+transition: 0.6s all ease-in-out;
+  visibility: visible;
+}
+
+
+
+.active .carousel-item__image{ 
+transition: 0.6s all ease-in-out;
+transform: translateX(0);
+}
+
+/* Container Principal */
+.autores-destaque {
+  height: 130vh;
+  background-color: #218DAA;
+  overflow-y: scroll;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo das Imagens em Miniatura e Containers */
+.thumbnail-container {
+  text-align: center;
+  margin: 10px;
+  margin-top: 25%;
+}
+
+
+
+.ImgThumbnail {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  height: 500px;
+  width: 300px;
+  object-fit: cover;
+  display: inline-block;
+  filter: grayscale(1);
+}
+
+.ImgThumbnail:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+/* Estilo do Texto da Descrição */
+figcaption {
+  color: #ffffff;
+  font-size: 34px;
+  margin-top: 10px;
+}
+
+/* Estilo do Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalImage {
+  margin: auto;
+  display: block;
+  width: 100%;
+  margin-top: 8%;
+  height: 60%;
+  max-width: 700px;
+  border: 15px double #fff;
+}
+
+.modalImage:hover{
+  border: 15px solid #000;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+/* Estilo do Botão de Fechar */
+.close {
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: #ffffff;
+  font-size: 40px;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  text-align: center; /* Centralizar o texto */
+  padding: 20px 0; /* Espaçamento interno no topo e embaixo */
+  position: relative; /* Posição relativa para possíveis ajustes */
+  width: 100%; /* Largura total */
+}
+
+footer p {
+  margin: 0; /* Remover margem */
+  font-size: 1rem; /* Tamanho da fonte relativo */
+  font-family: Arial, sans-serif; /* Fonte Arial com fallback */
+}
+
+/*Media All*/
+@media screen and (max-width: 970px) {
+    .wrapper .btn{
+      display: block;
+      
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      top: 0;
+      left: -100%;
+      background: #065F89;
+      
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+    }
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #242526;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3A3B3C;
+    }
+    #menu-btn:checked ~ .nav-links{
+      left: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 20px;
+    }
+    .nav-links .drop-menu{
+      position: static;
+      opacity: 1;
+      top: 65px;
+      visibility: visible;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      
+    }
+    #showDrop:checked ~ .drop-menu,
+    #showMega:checked ~ .mega-box{
+      max-height: 100%;
+    }
+    .nav-links .desktop-item{
+      display: none;
+    }
+    .nav-links .mobile-item{
+      display: block;
+      color: #f2f2f2;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .nav-links .mobile-item:hover{
+      background: #3A3B3C;
+    }
+    .drop-menu li{
+      margin: 0;
+    }
+    .drop-menu li a{
+      border-radius: 5px;
+      font-size: 18px;
+    }
+    .mega-box{
+      position: static;
+      top: 65px;
+      opacity: 1;
+      visibility: visible;
+      padding: 0 10px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .mega-box .content{
+      box-shadow: none;
+      flex-direction: column;
+      padding: 20px 20px 0 20px;
+    }
+    .mega-box .content .row{
+      width: 100%;
+      margin-bottom: 15px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .mega-box .content .row:nth-child(1),
+    .mega-box .content .row:nth-child(2){
+      border-top: 0px;
+    }
+    .content .row .mega-links{
+      border-left: 0px;
+      padding-left: 15px;
+    }
+    .row .mega-links li{
+      margin: 0;
+    }
+    .content .row header{
+      font-size: 19px;
+    }
+
+    .ultimos-livros{
+      display: flex;
+      flex-direction: column ;
+      overflow: scroll;
+      height: auto;
+      width: auto;
+    }
+
+    .card{
+      width: 84%;
+    }
+
+
+    .ultimos-livros .card-read-more{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 8%;
+      top: 102%;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more p{
+      color: #fff;
+    }
+
+    .ultimos-livros .card-read-more-bookTwo{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 8%;
+      top: 161vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookTree{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 8%;
+      top: 222vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookFour{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 289vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+    
+    .ultimos-livros .card-read-more-bookFive{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 350vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+    .ultimos-livros .card-read-more-bookSix{
+      z-index: 2;
+      width: 84%;
+      height: 24.125rem;
+      left: 9%;
+      top: 409vh;
+      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.635);
+    }
+
+
+
+    .livros-populares{
+      height: 100vh;
+      
+    }
+
+    
+    .carousel{
+      max-width: 100%;
+    }
+    
+    .carousel-item__info{
+      width: 50%;
+      border: none;
+      padding: 5px;   
+    }
+
+
+    .carousel-item__description{
+      font-size: 25px;
+      width: 44vw;
+      line-height: 30px;
+    }
+
+    .carousel-item__title{
+      font-size: 40px;
+    }
+    .carousel-item__subtitle{
+      font-size: 25px;
+    }
+    .carousel-item__container{
+      width: 2vh;
+    }
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 500ms ease-out;
+    transition-delay: 500ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 1000ms ease-in, transform 500ms ease-out;
+    transition-delay: 500ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 500ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+    transition-delay: 1000ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 500ms ease-in, transform 500ms ease-in;
+    transition-delay: 500ms;
+  }
+}
+
+
+/*Media Cards*/
+
+@media (max-width: 1200px) {
+  .card-read-more, 
+  .card-read-more-bookTwo, 
+  .card-read-more-bookTree, 
+  .card-read-more-bookFour, 
+  .card-read-more-bookFive, 
+  .card-read-more-bookSix {
+    width: 20vw; /* Adjust width for smaller screens */
+  }
+
+  .card-read-more, 
+  .card-read-more-bookFour {
+    right: 50vw; /* Adjust positioning for smaller screens */
+  }
+
+  .card-read-more-bookTwo,
+  .card-read-more-bookTree,
+  .card-read-more-bookFive,
+  .card-read-more-bookSix {
+    right: 10vw; /* Adjust positioning for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-read-more, 
+  .card-read-more-bookTwo, 
+  .card-read-more-bookTree, 
+  .card-read-more-bookFour, 
+  .card-read-more-bookFive, 
+  .card-read-more-bookSix {
+    width: 80vw; /* Full width for very small screens */
+    right: 10vw; /* Center the cards */
+    left: 10vw; /* Center the cards */
+    top: 50vh; /* Add margin from the top */
+    bottom: auto;
+  }
+}
+
+
+@media screen and (max-width:500px){
+  .card{
+    margin-left: 8%;
+  }
+}
+
