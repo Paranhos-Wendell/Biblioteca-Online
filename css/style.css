@@ -803,6 +803,7 @@ footer p {
 
     .card{
       width: 84%;
+      height: 28%;
       margin-left: 17%;
     }
 
@@ -836,7 +837,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 8%;
-      top: 205vh;
+      top: 203vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -846,7 +847,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 262.5vh;
+      top: 250vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
