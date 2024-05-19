@@ -803,6 +803,7 @@ footer p {
 
     .card{
       width: 84%;
+      margin-left: 17%;
     }
 
 
@@ -825,7 +826,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 8%;
-      top: 161vh;
+      top: 153vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -835,7 +836,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 8%;
-      top: 222vh;
+      top: 205vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -845,7 +846,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 289vh;
+      top: 262.5vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -855,7 +856,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 350vh;
+      top: 315vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -865,7 +866,7 @@ footer p {
       width: 84%;
       height: 24.125rem;
       left: 9%;
-      top: 409vh;
+      top: 367vh;
       border-radius: 12px;
       background-color: rgba(0, 0, 0, 0.635);
     }
@@ -1012,10 +1013,4 @@ footer p {
   }
 }
 
-
-@media screen and (max-width:500px){
-  .card{
-    margin-left: 8%;
-  }
-}
 
